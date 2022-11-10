@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 6 CSS</title>
+    <style>
+        
+        img {
+            position: absolute; 
+            margin: auto;
+            display: block;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 1;
+        }
+
+        .space {
+            background-image: url('Space.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            height: 100vh;
+            position: relative;
+    
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="astro">
+        <img src="Astro.png" alt="astro">
+    </div>
+    <div class="space"></div>
+</body>
+
+</html>
