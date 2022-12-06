@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+        .color {
+            background-color: rgb(204, 153, 0);
+            padding: 2px;
+        }
+
+        label {
+            /*Para ter certeza que todas as labels tem o mesmo tamanho e estão propriamente alinhadas */
+            display: inline-block;
+            width: 90px;
+            text-align: left;
+        }
+
+        textarea {
+            /* Para alinhar corretamente os campos de texto de várias linhas com sua label*/
+            vertical-align: top;
+
+            /* Para dar espaço suficiente para digitar algum texto */
+            height: 5em;
+
+            /* Para permitir aos usuários redimensionarem qualquer textarea verticalmente. Ele não funciona em todos os browsers */
+            resize: vertical;
+        }
+        .col-2 {
+            columns: 2 400px;
+        }
+        .col-10 {
+            columns: 10 800px;
+        }
+        .flex {
+            display: flex;
+        }
+        .pass {
+            margin-top: 5px;
+        }
+        .status {
+            margin-top: 5px;
+        }
+        .tipo {
+            margin-top: 5px;
+        }
+        .data {
+            margin-top: 5px;
+        }
+        .inline {
+            display: inline;
+        }
+        .perfil {
+            margin-top: 5px;
+        }
+        .observacoes {
+            margin-top: 5px;
+        }
+        .dcontents {
+            display:contents;
+        }
+        .ml {
+            margin-left: 30px;
+        }
+        .modulos {
+            margin-top: 5px;
+        }
+        .padding-top {
+            padding-top: 10px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <p class="color">SISTEMA DE GESTÃO ACADÉMICA</p>
+    <p>MANUTENÇÃO DE USUÁRIOS DO SISTEMA INTERNO</p>
+    <br>
+    <form action="" method="post">
+        <div class="login flex">
+            <div class="col-2">
+                <label for="login">Login</label>
+            </div>
+            <div class="col-10">
+                <input type="text" name="login" id="login">
+            </div>
+        </div>
+        <div class="pass flex">
+            <div class="col-2">
+                <label for="password">Password</label>
+            </div>
+            <div class="col-10">
+                <input type="password" name="password" id="password">
+            </div>
+        </div>
+        <div class="status flex">
+            <div class="col-2">
+                <label for="status">Status</label>
+            </div>
+            <div class="col-10">
+                <select name="status" id="status">
+                    <option value="inativo">Inativo</option>
+                    <option value="ativo">Ativo</option>
+                </select>
+            </div> 
+        </div>
+
+        <div class="tipo flex">
+            <div class="col-2">
+                <label for="tipo">Tipo</label>
+            </div>
+            <div class="col-10">
+                <input type="radio" id="tipo" name="tipo">
+                <label for="tipo">Técnico</label>
+                <input type="radio" id="tipo" name="tipo">
+                <label for="tipo">Professor</label>
+                <input type="radio" id="tipo" name="tipo">
+                <label for="tipo">Aluno</label>
+            </div>
+        </div>
+
+        <div class="data flex">
+            <div class="col-2">
+                <label class="inline" for="data">Data Criação</label>
+            </div>
+            <div class="col-10">
+                <input type="date" name="data" id="data">
+            </div>
+        </div>
+
+        <div class="perfil flex">
+            <div class="col-2">
+                <label for="perfil">Perfil</label>
+            </div>
+            <div class="col-10">
+                <input type="radio" id="perfil" name="perfil">
+                <label for="perfil">Convidado</label>
+                <input type="radio" id="perfil" name="perfil">
+                <label for="genero">Administrador</label>
+            </div>
+        </div>
+
+        <div class="observacoes flex">
+            <div class="col-2">
+                <label for="observacoes">Observações</label>
+            </div>
+            <div class="col-10">
+                <textarea name="observacoes" id="observacoes" cols="50" rows="50"> </textarea>
+            </div>
+        </div>
+
+        <div class="modulos flex">
+            <div class="col-2">
+                <label for="modulos" class="padding-top">Módulos</label>
+            </div>
+            <div class="col-10">
+                <input type="checkbox" id="comp" name="comp">
+                <label for="comp">Compras</label>
+                <input type="checkbox" id="bib" name="bib">
+                <label for="bib">Biblioteca</label>
+                <input type="checkbox" id="aca" name="aca">
+                <label for="aca">Académico</label>
+                <br>
+                <input type="checkbox" id="doc" name="doc">
+                <label for="doc">Documentação</label>
+                <input type="checkbox" id="rec" name="rec" class="ml">
+                <label for="rec" class="dcontents">Recursos Humanos</label>
+            </div>
+        </div>
+
+        <div class="bot">
+            <p><input type="submit" value="Enviar"> <input type="reset" value="Limpar"></p>
+        </div>
+</body>
+
+</html>
